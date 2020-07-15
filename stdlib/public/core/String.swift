@@ -687,6 +687,17 @@ extension String {
   }
 }
 
+extension String {
+  /// Repeats a string a set number of times and returns repeated string
+  ///
+  /// - Parameter times: A number (greater than 0) of times to repeat the string
+  /// - Returns: A single, repeated string.
+  @inlinable
+  public func repeated(_ times: Int) -> String {
+	return String(repeating: self, count: times)
+  }
+}
+
 extension Sequence where Element: StringProtocol {
   /// Returns a new string by concatenating the elements of the sequence,
   /// adding the given separator between each element.
